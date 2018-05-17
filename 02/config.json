@@ -1,0 +1,49 @@
+{
+	"ws_servers":	[{
+			"host":	"academic.cloud.thingworx.com",
+			"port":	443
+		}],
+	"appKey":	"YOUR_APPLICATION_KEY",
+	"ws_connection":	{
+		"encryption":	"ssl"
+	},
+	"http_server":	{
+		"host":	"localhost",
+		"port":	8000,
+		"use_default_certificate":	true,
+		"ssl":	true,
+		"authenticate":	false
+	},
+	"certificates":	{
+		"validate":	false,
+		"allow_self_signed":	true,
+		"cert_chain":	"/etc/ssl/certs/DigiCert_High_Assurance_EV_Root_CA.pem"
+	},
+	"offline_msg_store":	{
+		"enabled":	true,
+		"directory":	"<EMS_HOME>/tmp",
+		"max_size":	65535
+	},
+	"file":	{
+		"buffer_size":	8192,
+		"max_file_size":	8000000000,
+		"virtual_dirs":	[{
+				"In":	"<EMS_HOME>/tmp/in"
+			}, {
+				"Out":	"<EMS_HOME>/tmp/out"
+			}],
+		"idle_timeout":	12000,
+		"staging_dir":	"<EMS_HOME>/tmp/staging"
+	},
+	"logger":	{
+		"level":	"INFO",
+		"audit_target":	"file://<EMS_HOME>/log/audit.log",
+		"publish_directory":	"<EMS_HOME>/log/",
+		"publish_level":	"WARN",
+		"max_file_storage":	2000000,
+		"auto_flush":	true,
+		"flush_chunk_size":	16384,
+		"buffer_size":	4096
+	},
+	"auto_bind":	[]
+}

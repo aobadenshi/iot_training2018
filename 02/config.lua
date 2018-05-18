@@ -39,7 +39,7 @@ scripts.script_resource_use_default_certificate = true
 -- Edge Thing Configuration
 -------------------------------------------------------------------------------
 
-scripts.EdgeThing_sfujiwara = {
+scripts.EdgeThing_<YOUR_NAME> = {
    file = "thing.lua",
    template = "edgething",
 }
